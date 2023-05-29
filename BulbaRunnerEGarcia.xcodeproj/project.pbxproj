@@ -91,7 +91,6 @@
 				33676FB72A23214200CF896E /* Fonts */,
 				33676FB42A2315E200CF896E /* Types */,
 				33676FAF2A22F48700CF896E /* Utils */,
-				33676FAE2A22E87F00CF896E /* Controller */,
 				33676FAD2A22E84700CF896E /* Resources */,
 				33676F962A22E65400CF896E /* AppDelegate.swift */,
 				33676F9E2A22E65400CF896E /* GameViewController.swift */,
@@ -109,13 +108,6 @@
 				33676FA02A22E65400CF896E /* Main.storyboard */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		33676FAE2A22E87F00CF896E /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		33676FAF2A22F48700CF896E /* Utils */ = {

@@ -220,8 +220,9 @@ extension GameScene {
         player.position.x += amountToMove
     }
     func setupObstacles(){
-        for i in 1...3{
+        for i in 1...2{
             let sprite = SKSpriteNode(imageNamed: "block-\(i)")
+           // let sprite = SKSpriteNode(imageNamed: "block")
             sprite.name = "Block"
             obstables.append(sprite)
         }
@@ -235,7 +236,7 @@ extension GameScene {
         let sprite = obstables[index].copy() as! SKSpriteNode
         sprite.zPosition = 5.0
         sprite.setScale(0.85)
-        sprite.position = CGPoint(x: cameraRect.maxX + sprite.frame.width/2.0, y: ground.frame.height + sprite.frame.height/2.0)
+        sprite.position = CGPoint(x: cameraRect.maxX + sprite.frame.width/2.0, y: ground.frame.height + sprite.frame.height/3.7)
         sprite.physicsBody = SKPhysicsBody(rectangleOf: sprite.size)
         sprite.physicsBody!.affectedByGravity = false
         sprite.physicsBody!.isDynamic = false
@@ -272,7 +273,7 @@ extension GameScene {
         ])))
     }
     func setupCandy(){
-        candy = SKSpriteNode(imageNamed: "life-on")
+        candy = SKSpriteNode(imageNamed: "candy")
         let candyHeight = candy.frame.height
         let random = CGFloat.random(min: -candyHeight, max: candyHeight*2.0)
         candy.position = CGPoint(x: cameraRect.maxX + candy.frame.width, y: size.height/2.0 + random)
@@ -318,7 +319,7 @@ extension GameScene {
     }
     func setupScore(){
         //icono
-        candyIcon = SKSpriteNode(imageNamed: "icon-1")
+        candyIcon = SKSpriteNode(imageNamed: "candy")
         candyIcon.setScale(0.5)
         candyIcon.zPosition = 50.0
         candyIcon.position = CGPoint(x: -playableRect.width/2.0 + candyIcon.frame.width, y: playableRect.height/2.0 - lifeNodes[0].frame.height - candyIcon.frame.height/2.0)
@@ -330,7 +331,7 @@ extension GameScene {
         scoreLbl.horizontalAlignmentMode = .left
         scoreLbl.verticalAlignmentMode = .top
         scoreLbl.zPosition = 50.0
-        scoreLbl.position = CGPoint(x: -playableRect.width/2.0 + candyIcon.frame.width*2.0 - 10.0, y: candyIcon.position.y + candyIcon.frame.height/2.0 - 8.0)
+        scoreLbl.position = CGPoint(x: -playableRect.width/2.0 + candyIcon.frame.width*2.0 - 10.0, y: candyIcon.position.y + candyIcon.frame.height/4.0 - 8.0)
         cameraNode.addChild(scoreLbl)
     }
     func setupGameOver(){
