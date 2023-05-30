@@ -83,16 +83,16 @@ extension MainMenu {
     func setupNodes() {
         let bulba = SKSpriteNode(imageNamed: "bulba")
         bulba.name = "bulba"
-        bulba.setScale(1.8)
+        bulba.setScale(2.5)
         bulba.zPosition = 10.0
-        bulba.position = CGPoint(x: size.width/2.0, y: size.height/2.0 + bulba.size.height - 50.0)
+        bulba.position = CGPoint(x: size.width/2.0, y: size.height/3.5 + bulba.size.height - 50.0)
         addChild(bulba)
         
         let play = SKSpriteNode(imageNamed: "play")
         play.name = "play"
         play.setScale(0.85)
         play.zPosition = 10.0
-        play.position = CGPoint(x: size.width/2.0, y: size.height/2.0 + play.size.height - 50.0)
+        play.position = CGPoint(x: size.width/2.0, y: size.height/2.5 + play.size.height - 50.0)
         addChild(play)
         
         let highscore = SKSpriteNode(imageNamed: "highscore")
@@ -124,7 +124,7 @@ extension MainMenu {
         let highscoreLbl = SKLabelNode(fontNamed: "Arial")
         highscoreLbl.text = "Highscore: \(ScoreGenerator.sharedInstance.getHighscore())"
         highscoreLbl.horizontalAlignmentMode = .left
-        highscoreLbl.fontSize = 80.0
+        highscoreLbl.fontSize = 50.0
         highscoreLbl.zPosition = 25.0
         highscoreLbl.position = CGPoint(x: x, y: highscoreLbl.frame.height/2.0 - 30.0)
         panel.addChild(highscoreLbl)
@@ -132,9 +132,9 @@ extension MainMenu {
         let scoreLbl = SKLabelNode(fontNamed: "Arial")
         scoreLbl.text = "Score: \(ScoreGenerator.sharedInstance.getScore())"
         scoreLbl.horizontalAlignmentMode = .left
-        highscoreLbl.fontSize = 80.0
+        highscoreLbl.fontSize = 50.0
         highscoreLbl.zPosition = 25.0
-        highscoreLbl.position = CGPoint(x: x, y: -scoreLbl.frame.height - 30.0)
+        highscoreLbl.position = CGPoint(x: x, y: scoreLbl.frame.height/2.0 - 30.0)
         panel.addChild(scoreLbl)
         
         
