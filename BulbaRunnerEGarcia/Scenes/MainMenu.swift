@@ -83,23 +83,24 @@ extension MainMenu {
     func setupNodes() {
         let bulba = SKSpriteNode(imageNamed: "bulba")
         bulba.name = "bulba"
-        bulba.setScale(2.5)
+        bulba.setScale(1.8)
         bulba.zPosition = 10.0
-        bulba.position = CGPoint(x: size.width/2.0, y: size.height/3.5 + bulba.size.height - 50.0)
+        bulba.position = CGPoint(x: size.width/2.0, y: size.height/3.0 + bulba.size.height - 50.0)
         addChild(bulba)
         
         let play = SKSpriteNode(imageNamed: "play")
         play.name = "play"
-        play.setScale(0.85)
+        play.setScale(0.40)
         play.zPosition = 10.0
         play.position = CGPoint(x: size.width/2.0, y: size.height/2.5 + play.size.height - 50.0)
         addChild(play)
         
         let highscore = SKSpriteNode(imageNamed: "highscore")
         highscore.name = "highscore"
-        highscore.setScale(0.85)
+        highscore.setScale(0.80)
         highscore.zPosition = 10.0
-        highscore.position = CGPoint(x: size.width/2.0, y: size.height/2.0 - highscore.size.height - 50.0)
+      //  highscore.position = CGPoint(x: size.width/2.0, y: size.height/2.0 - highscore.size.height - 50.0)
+        highscore.position = CGPoint(x: size.width/2.0, y: size.height/2.2 - highscore.size.height - 50.0)
         addChild(highscore)
         
 //        let setting = SKSpriteNode(imageNamed: "setting")

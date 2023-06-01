@@ -15,7 +15,7 @@ class GameOver: SKScene {
         createNode()
         
         run(.sequence([
-            .wait(forDuration: 5.0),
+            .wait(forDuration: 3.0),
             .run {
                 let scene = MainMenu(size: self.size)
                 scene.scaleMode = self.scaleMode
@@ -75,7 +75,7 @@ extension GameOver {
     func createNode() {
         let gameOver = SKSpriteNode(imageNamed: "gameOver")
         gameOver.zPosition = 10.0
-        gameOver.position = CGPoint(x: size.width/2.0, y: size.height/2.0 + gameOver.frame.height/2.0)
+        gameOver.position = CGPoint(x: size.width/2.0, y: size.height/4.2 + gameOver.frame.height/2.0)
         addChild(gameOver)
         
         let scaleUp = SKAction.scale(to: 1.1, duration: 0.5)

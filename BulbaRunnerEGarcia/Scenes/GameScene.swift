@@ -148,6 +148,7 @@ extension GameScene {
     func createBG(){
         for i in 0...2{
             let bg = SKSpriteNode(imageNamed: "background")
+         
             bg.name = "BG"
             bg.anchorPoint = .zero
             bg.position = CGPoint(x: CGFloat(i)*bg.frame.width, y: 0.0)
@@ -311,7 +312,7 @@ extension GameScene {
     func setupLifePos(_ node: SKSpriteNode, i: CGFloat, j: CGFloat) {
         let width = playableRect.width
         let height = playableRect.height
-        node.setScale(0.5)
+        node.setScale(0.2)
         node.zPosition = 50.0
         node.position = CGPoint(x: -width/2.0 + node.frame.width*i + j - 15.0, y: height/2.0 - node.frame.height/2.0)
         cameraNode.addChild(node)
