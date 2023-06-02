@@ -124,7 +124,7 @@ extension MainMenu {
         setupContainer()
         
         let panel = SKSpriteNode(imageNamed: "panel")
-        panel.setScale(1.5)
+        panel.setScale(0.45)
         panel.zPosition = 20.0
         panel.position = .zero
         containerNode.addChild(panel)
@@ -135,9 +135,10 @@ extension MainMenu {
         let highscoreLbl = SKLabelNode(fontNamed: "Arial")
         highscoreLbl.text = "Highscore: \(ScoreGenerator.sharedInstance.getHighscore())"
         highscoreLbl.horizontalAlignmentMode = .left
-        highscoreLbl.fontSize = 50.0
+        highscoreLbl.fontSize = 100.0
         highscoreLbl.zPosition = 25.0
         highscoreLbl.position = CGPoint(x: x, y: highscoreLbl.frame.height/2.0 - 30.0)
+       // highscoreLbl.position = CGPoint(x: 700, y: 900)
         panel.addChild(highscoreLbl)
         
         let scoreLbl = SKLabelNode(fontNamed: "Arial")
@@ -146,6 +147,7 @@ extension MainMenu {
         highscoreLbl.fontSize = 50.0
         highscoreLbl.zPosition = 25.0
         highscoreLbl.position = CGPoint(x: x, y: scoreLbl.frame.height/2.0 - 30.0)
+       // highscoreLbl.position = CGPoint(x: x, y: scoreLbl.frame.height/2.0 - 30.0)
         panel.addChild(scoreLbl)
         
         
